@@ -196,17 +196,14 @@ footer div {
     flex-wrap: wrap;
     justify-content: space-around;
 }
-
 .trainer {
     margin: 20px;
     background: #024e76;
     color: #fce138;
     flex: 1;
-
 }
 .trainer img {
     width: 100%;
-
 }
 .trainer-bio {
     padding: 25px;
@@ -225,7 +222,16 @@ footer div {
 }
 .trainer-bio p {
     font-size: 17px;
-
+}
+.service-grid-container {
+    display: grid;
+}
+.service-grid-item {
+    width: 200px;
+    height: 50px;
+    background-color: orange;
+    border: solid;
+    color: black;
 }
 .contact {
     color: #fce138;
