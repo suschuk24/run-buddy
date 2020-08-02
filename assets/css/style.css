@@ -211,7 +211,6 @@ footer div a {
     left: -26px;
     top: 1px;
     transform: rotate(-58deg)
-
 }
 .steps {
     background: var(--primary-color);
@@ -298,8 +297,64 @@ footer div a {
     color: var(--primary-color);
     flex: 1;
 }
-.trainer img {
+.trainer-1 {
+    background-image: url("../images/trainer-1.jpg");
+    background-size: cover;
+    overflow: hidden;
+}
+.trainer-2 {
+    background-image: url("../images/trainer-2.jpg");
+    background-size: cover;
+    overflow: hidden;
+}
+.trainer-3 {
+    background-image: url("../images/trainer-3.jpg");
+    background-size: cover;
+    overflow: hidden;
+}
+.trainer-img {
     width: 100%;
+    min-height: 300px;
+    display: flex;
+    padding: 15px;
+    align-items: flex-end;
+    position: relative;
+}
+.trainer-img h3  {
+    position: relative;
+    z-index: 1;
+    font-size: 28px;
+    margin-bottom: 5px;
+    top: 200px;
+    transition: 0.6s;
+}
+.trainer-img h4 {
+    position: relative;
+    z-index: 1;
+    font-size: 22px;
+    font-weight: lighter;
+    top: 200px;
+    transition: 0.6s;
+}
+.trainer-img::after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    background: linear-gradient( rgba(252, 225, 56, 0.3), rgba(2, 78, 118, 1) );
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: 1.6s;
+}
+.trainer:hover .trainer-img::after{
+    opacity: 1;
+}
+.trainer:hover .trainer-img h3, .trainer:hover .trainer-img h4 {
+    top: 0;
+}
+.trainer:hover .trainer-img h4 {
+    transition-delay: 0.2s;
 }
 .trainer-bio {
     padding: 25px;
@@ -310,11 +365,13 @@ footer div a {
 }
 .trainer-bio h3 {
     font-size: 28px;
+    display: none;
 }
 .trainer-bio h4 {
     font-weight: lighter;
     font-size: 22px;
     margin-bottom: 15px;
+    display: none;
 }
 .trainer-bio p {
     font-size: 17px;
@@ -428,6 +485,7 @@ footer div a {
     background: var(--tertiary-color);
 }
 /* Media Query for smaller desktop screens and smaller*/
+
 @media screen and (max-width: 980px) {
     header {
         padding-bottom: 0;
@@ -502,6 +560,12 @@ footer div a {
           grid-row: -1;
           writing-mode: unset;
           transform: none;
+      }
+      .trainer-img::after, .trainer-img h3, .trainer-img h4 {
+          display: none;
+      }
+      .trainer-bio h3, .trainer-bio h4 {
+          display: block;
       }
 }
 /* Media query for movile phones and smaller */
