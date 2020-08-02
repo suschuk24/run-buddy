@@ -1,10 +1,15 @@
+:root {
+    --primary-color: #fce138;
+    --secondary-color: #024e76;
+    --tertiary-color: #39a6b2;
+}
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 body {
-    color: #32a6b2;
+    color: var(--tertiary-color);
     font-family: Helvetica, Arial, sans-serif;
 }
 header {
@@ -19,16 +24,17 @@ header {
     position: -webkit-sticky;
     position: sticky;
     top: 0;
+    z-index: 9999;
 }
 header h1 {
     font-weight: bold;
     font-size: 36px;
-    color: #fce138;
+    color: var(--primary-color);
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 header a {
     text-decoration: none;
-    color: #fce138;
+    color: var(--primary-color);
 }
 header nav {
     margin: 7px;
@@ -47,19 +53,19 @@ header nav ul li a {
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 header nav ul li a:hover {
-    background: #fce138;
-    color: #024e76;
+    background: var(--primary-color);
+    color: var(--secondary-color);
     border-radius: 15px;
     text-shadow: none;
 }
 #reach-out {
-    color: #fce138 ;
+    color: var(--primary-color);
 }
 footer {
-    background:   #024e76;
+    background: var(--secondary-color);
     width: 100%;
     padding: 40px 35px;
-    color:#fce138;
+    color:var(--primary-color);
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -71,10 +77,9 @@ footer h2 {
 footer div {
     line-height: 1.5;
     text-align: right;
-    ;
 }
 footer div a {
-    color: #fce138
+    color: var(--primary-color);
 }
 .hero {
     background-image: url("../images/hero-bg.jpg");
@@ -89,8 +94,8 @@ footer div a {
 .hero-form {
     background-color:rgba(252, 225, 56, 0.8);
     padding: 20px;
-    color: #024e76;
-    border: solid 3px #024e76;
+    color: var(--secondary-color);
+    border: solid 3px var(--secondary-color);
     width: 40%;
     margin: 3.5%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -107,7 +112,7 @@ footer div a {
 .hero-cta h2 {
     font-style: italic;
     font-size: 55px;
-    color: #fce138;
+    color: var(--primary-color);
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 .hero-form h3 {
@@ -118,11 +123,11 @@ footer div a {
     margin: 5px 0 15px 0;
 }
 .form-input {
-    border: 1px solid #024e76;
+    border: 1px solid var(--secondary-color);
     display: block;
     padding: 7px 15px;
     font-size: 16px;
-    color: #024e76;
+    color: var(--secondary-color);
     width: 100%;
     margin-bottom: 15px;
     border-radius: 10px;
@@ -133,8 +138,8 @@ footer div a {
     outline: none;
 }
 .hero-form button {
-    color: #fce138;
-    background-color:#024e76;
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
     border: none;
     padding: 10px 20px;
     font-size: 16px;
@@ -142,26 +147,78 @@ footer div a {
     border-radius: 10px;
 }
 .hero-form button:hover {
-    background-color: #39a6b2;
+    background-color: var(--tertiary-color);
 }
 .intro {
     margin-bottom: 30px;
 }
 .intro p {
     line-height: 1.7;
-    color: #39a6b2;
+    color: var(--tertiary-color);
     width: 80%;
     font-size: 20px;
     margin: 0 auto;
     text-align: center;
 }
+.checkbox-wrapper input, .radio-wrapper input {
+    opacity: 0;
+}
+.checkbox-wrapper label, .radio-wrapper label {
+    position: relative;
+    left: 10px;
+    margin: 10px;
+    line-height: 1.6;
+}
+.checkbox-wrapper label::before, .radio-wrapper label::before {
+    content: "";
+    height: 20px;
+    width: 20px;
+    background: rgba(225, 225, 225, 0.75);
+    border: 1px solid var(--secondary-color);
+    position: absolute;
+    top: -4px;
+    left: -30px;
+}
+.radio-wrapper label::before {
+    border-radius: 50%;
+}
+.radio-wrapper label::after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--secondary-color);
+    position: absolute;
+    left: -29px;
+    top: -3px;
+    background-image: radial-gradient(circle, var(--tertiary-color), var(--secondary-color));
+}
+.checkbox-wrapper input + label::after,
+.radio-wrapper input + label::after {
+    content: none;
+}
+.checkbox-wrapper input:checked + label::after,
+ .radio-wrapper input:checked +label::after {
+    content: "";
+} 
+.checkbox-wrapper label::after {
+    content: "";
+    width: 14px;
+    height: 6px;
+    border-left: 2px solid var(--secondary-color);
+    border-bottom: 2px solid var(--secondary-color);
+    position: absolute;
+    left: -26px;
+    top: 1px;
+    transform: rotate(-58deg)
 
+}
 .steps {
-    background: #fce138;
+    background: var(--primary-color);
     padding-bottom: 120px;
 }
 .steps h2 {
-    color: #024e76;
+    color: var(--secondary-color);
 }
 .section-title {
     font-size: 48px;
@@ -173,14 +230,14 @@ footer div a {
 }
 
 .primary-border {
-    color: #024e76;
-    border-bottom: solid 3px #fce138;
+    color: var(--secondary-color);
+    border-bottom: solid 3px var(--primary-color);
     padding: 30px;
     margin-bottom: 50px;
 }
 .secondary-border {
-    color: #024e76;
-    border-bottom: solid 3px #39a6b2;
+    color: var(--secondary-color);
+    border-bottom: solid 3px var(--tertiary-color);
     padding: 30px;
     margin-bottom: 50px;
 }
@@ -188,7 +245,7 @@ footer div a {
     margin: 50px auto;
     padding-bottom: 50px;
     width: 80%;
-    border-bottom: 1px solid #39a6b2;
+    border-bottom: 1px solid var(--tertiary-color);
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -198,7 +255,7 @@ footer div a {
     border-bottom: none;
   }
 .step h3 {
-    color: #024e76;
+    color: var(--tertiary-color);
     font-size: 46px;
     flex: 1 30%;
 }
@@ -219,14 +276,14 @@ footer div a {
     flex: 12;
 }
 .step-text p {
-    color: #39a6b2;
+    color: var(--tertiary-color);
     font-size: 18px;
     margin: 30px 0;
 }
 .step-text h4 {
     font-size: 26px;
     line-height: 1.5;
-    color: #024e76;
+    color: var(--secondary-color);
 }
 .trainers {
     width: 90%;
@@ -237,8 +294,8 @@ footer div a {
 }
 .trainer {
     margin: 20px;
-    background: #024e76;
-    color: #fce138;
+    background: var(--secondary-color);
+    color: var(--primary-color);
     flex: 1;
 }
 .trainer img {
@@ -264,7 +321,7 @@ footer div a {
 }
 /*Service Styles*/
 .services {
-    background: #fce138;
+    background: var(--primary-color);
     padding-bottom: 50px;
 }
 .service-grid-wrapper {
@@ -279,13 +336,13 @@ footer div a {
     display: grid;
     grid-template-columns: 1fr repeat(2, 4fr);
     grid-template-rows: repeat(5, 1fr) 2fr;
-    border: 2px solid #024e76;
-    color:  #024e76;
+    border: 2px solid var(--secondary-color);
+    color:  var(--secondary-color);
     font-size: 1.2rem;
 }
 .service-grid-item {
     padding: 15px 0;
-    border: 2px solid #024e76;
+    border: 2px solid var(--secondary-color);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -308,8 +365,8 @@ footer div a {
     font-weight: bold;
 }
 .contact {
-    color: #fce138;
-    background-color: #024e76;
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
 }
 .contact-info {
     display: flex;
@@ -328,7 +385,7 @@ footer div a {
     color: white;
 }
 .contact-info h3 {
-    color: #fce138;
+    color: var(--primary-color);
     font-size: 32px;
 }
 .contact-info p, .contact-info address {
@@ -338,14 +395,14 @@ footer div a {
     font-style: normal;
 }
 .contact-info a {
-    color:#fce138;
+    color:var(--primary-color);
 }
 .contact-form input, .contact-form textarea {
-    border: 1px solid #024e76;
+    border: 1px solid var(--secondary-color);
     display: block;
     padding: 7px 15px;
     font-size: 16px;
-    color: #024e76;
+    color: var(--secondary-color);
     width: 100%;
     margin-bottom: 15px;
     margin-top: 5px;
@@ -359,16 +416,16 @@ footer div a {
 .contact-form button {
     width: 100%;
     border: none;
-    background: #fce138;
-    color: #024e76;
+    background: var(--primary-color);
+    color: var(--secondary-color);
     text-align: center;
     padding: 15px 0;
     font-size: 16px;
     border-radius: 10px;
 }
 .contact-form button:hover {
-    color: #fce138;
-    background: #39a6b2;
+    color: var(--primary-color);
+    background: var(--tertiary-color);
 }
 /* Media Query for smaller desktop screens and smaller*/
 @media screen and (max-width: 980px) {
