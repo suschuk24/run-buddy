@@ -38,12 +38,14 @@ header nav ul li a {
     font-weight: lighter;
     font-size: 1.55vw;
 }
-
+#reach-out {
+    color: #fce138 ;
+}
 footer {
-    background: #fce138;
+    background:   #024e76;
     width: 100%;
     padding: 40px 35px;
-    color: #024e76;
+    color:#fce138;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -55,6 +57,10 @@ footer h2 {
 footer div {
     line-height: 1.5;
     text-align: right;
+    ;
+}
+footer div a {
+    color: #fce138
 }
 .hero {
     background-image: url("../images/hero-bg.jpg");
@@ -141,12 +147,14 @@ footer div {
 .primary-border {
     color: #024e76;
     border-bottom: solid 3px #fce138;
-    padding: 20px;
+    padding: 30px;
+    margin-bottom: 50px;
 }
 .secondary-border {
+    color: #024e76;
     border-bottom: solid 3px #39a6b2;
-    padding: 20px;
-    margin-bottom: 80px;
+    padding: 30px;
+    margin-bottom: 50px;
 }
 .step {
     margin: 50px auto;
@@ -190,8 +198,8 @@ footer div {
     color: #024e76;
 }
 .trainers {
-    width: 100%;
-    margin: 0 auto;
+    width: 90%;
+    margin: 0 auto 50px auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -226,11 +234,13 @@ footer div {
 /*Service Styles*/
 .services {
     background: #fce138;
+    padding-bottom: 50px;
 }
 .service-grid-wrapper {
     display: flex;
     width: 100%;
     justify-content: center;
+
 }
 .service-grid-container {
     background: lightyellow;
