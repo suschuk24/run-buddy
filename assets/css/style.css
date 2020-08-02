@@ -37,7 +37,7 @@ header a {
     color: var(--primary-color);
 }
 header nav {
-    margin: 7px;
+    margin-bottom:12px;
 }
 header nav ul {
     display: flex;
@@ -46,8 +46,11 @@ header nav ul {
     align-items: center;
     list-style: none;
 }
+header nav ul li {
+    margin: 10px;
+}
 header nav ul li a {
-    padding: 10px 15px;
+    padding: 20px 15px;
     font-weight: lighter;
     font-size: 1.55vw;
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
