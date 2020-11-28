@@ -1,5 +1,4 @@
-# Run BUddy
-
+# Run Buddy
 
 ## Description:
 
