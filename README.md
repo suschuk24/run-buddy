@@ -4,7 +4,7 @@
 
 ![License](https://img.shields.io/badge/License-MIT-blue.svg "License Badge")
 
-Run Budy is a landing page developed with lead generation in mind. This front end landing page will be used to call customers to action, filling out a card to receive more infomration about various sservices. 
+Run Budy is a landing page developed with lead generation in mind. This front end landing page will be used to call customers to action, filling out a card to receive more infomration about various services. 
 
 ## Application Screenshot
 
