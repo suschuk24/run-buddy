@@ -11,11 +11,8 @@ Run Budy is a landing page developed with lead generation in mind. This front en
 ![screenshot 1](./assets/images/screenshot.jpg)
 
 # Table of Contents 
-
-- [User Story](#User)
-- [Acceptance Criteria](#Acceptance)
-- [Contributions](#contributions)
 - [License](#license)
+- [Contributions](#contributions)
 - [Technologies Used](#languages)
 - [Questions](#questions)
 
@@ -26,7 +23,7 @@ For more information about licenses, please visit:
 
 
 
-## Contributing:
+## Contributions:
 
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](CODE_OF_CONDUCT.md)
 
